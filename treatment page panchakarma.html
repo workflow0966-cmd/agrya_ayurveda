@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panchakarma Treatment | Agrya Ayurveda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1f3d1f;
+  --deep:#2b4a36;
+  --green:#12a05c;
+  --cream:#f8f7f2;
+  --sage:#eef0dc;
+  --sage-2:#e4ead2;
+  --orange:#2f7a47;
+  --orange-2:#5aa56b;
+  --ink:#1c1c1c;
+  --muted:#6b6f68;
+  --blue:#4a8a5a;
+  --wordmark:#d9e4cb;
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+
+/* ---------- placeholder image helper ---------- */
+.ph{background-size:cover;background-position:center;background-color:#4c7a3a}
+.ph-lotus{background-image:linear-gradient(160deg,#1f3d1f,#3f7a3a 55%,#8fbf6a)}
+.ph-oil{background-image:linear-gradient(150deg,#2b5a2f,#5ea04e 60%,#b5d98a)}
+.ph-herb{background-image:linear-gradient(150deg,#244d28,#4f9142 60%,#a7d17a)}
+.ph-sunrise{background-image:linear-gradient(180deg,#1f4a3a,#3f8a5a 55%,#a9d6a0)}
+.ph-garden{background-image:linear-gradient(160deg,#1f4a27,#4e8a3a 60%,#9fcf72)}
+.ph-field{background-image:linear-gradient(160deg,#2a6a2a,#5fb04a 60%,#c1e594)}
+.ph-hills{background-image:linear-gradient(180deg,#9fcf8a,#4f8a4a 55%,#1f4a2f)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:640px;color:#fff;background:linear-gradient(180deg,rgba(18,40,18,.55),rgba(18,40,18,.25) 50%,rgba(18,40,18,.7)),linear-gradient(135deg,#1f3d1f,#3f6b34 45%,#6f9a55);overflow:hidden}
+.hero-inner{position:relative;max-width:1240px;margin:0 auto;padding:36px 28px 0;min-height:640px;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(24px,3.2vw,38px);text-align:center;line-height:1.25;max-width:520px;margin-top:6px}
+.btn-pill{display:inline-flex;align-items:center;gap:10px;background:#101a10;color:#fff;border-radius:999px;padding:12px 24px;font-size:13px;margin-top:22px;font-weight:500;transition:.25s}
+.btn-pill:hover{background:#000;transform:translateY(-2px)}
+.dot{width:8px;height:8px;border-radius:50%;background:#37d67a;box-shadow:0 0 8px #37d67a}
+.hero-side{position:absolute;top:230px;font-size:14px;opacity:.92}
+.hero-side.l{left:28px}
+.hero-side.r{right:28px}
+.socials{display:flex;gap:14px;margin-top:70px;font-size:11px;opacity:.7}
+.hero-nav{position:absolute;bottom:230px;left:0;right:0;display:flex;justify-content:center;gap:50px;font-size:11px;opacity:.75}
+.hero-nav a:hover{opacity:1;text-decoration:underline}
+.copy-s{position:absolute;right:28px;bottom:230px;font-size:10px;opacity:.6}
+.wordmark{position:absolute;bottom:-.16em;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(150px,27vw,360px);line-height:1;color:rgba(220,228,212,.88);letter-spacing:-.02em;white-space:nowrap;user-select:none}
+.hero-badge{position:absolute;right:0;top:110px;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);padding:8px 14px;border-radius:999px 0 0 999px;font-size:10px}
+
+/* ---------- TAG BAND ---------- */
+.band{position:relative;background:linear-gradient(90deg,#1b3a22 0%,#2f7a47 30%,#4f9a62 50%,#2f7a47 70%,#1b3a22 100%);overflow:hidden;padding:34px 0;border-top:3px solid #dfe9d6}
+.band::before,.band::after{content:"";position:absolute;top:0;bottom:0;width:18%;z-index:2;pointer-events:none}
+.band::before{left:0;background:linear-gradient(90deg,#14301a,rgba(20,48,26,0))}
+.band::after{right:0;background:linear-gradient(270deg,#14301a,rgba(20,48,26,0))}
+.band-track{display:flex;gap:56px;width:max-content;animation:slide 40s linear infinite}
+.band-track span{display:flex;align-items:center;gap:12px;color:#fff;font-size:17px;font-weight:500;white-space:nowrap}
+.band-track svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- section helpers ---------- */
+.tag{display:inline-flex;align-items:center;background:#e6eedb;color:var(--forest);border-radius:999px;padding:7px 18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.h2{font-size:clamp(32px,4vw,50px);font-weight:500;line-height:1.2;letter-spacing:-.01em}
+.small{font-size:12px;color:var(--muted);max-width:360px}
+.btn-green{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:999px;padding:10px 20px;font-size:12px;font-weight:500;transition:.25s}
+.btn-green:hover{background:#0c8049;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{background:#eee}
+
+/* ---------- 01 ABOUT ---------- */
+.about{padding:80px 0 90px}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+.about h2{margin:34px 0 22px}
+.thumbs{display:flex;gap:14px;margin-top:130px}
+.thumbs div{width:104px;height:104px;border-radius:14px}
+.cards{display:flex;flex-direction:column;gap:14px}
+.card{display:flex;justify-content:space-between;gap:20px;background:#fff;border-radius:18px;padding:22px 22px 22px 26px;box-shadow:0 4px 18px rgba(0,0,0,.04);transition:.3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.card h3{font-size:19px;font-weight:500;margin-bottom:8px}
+.card p{font-size:11.5px;color:var(--muted);margin-bottom:0;max-width:300px}
+.card .img{width:150px;min-width:150px;height:125px;border-radius:12px}
+.card .img{object-fit:cover;object-position:center}
+.card.dark{background:var(--forest);color:#fff}
+.card.dark p{color:#c6d4c0}
+
+/* ---------- 02 SERVICES ---------- */
+.services-head{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:36px;flex-wrap:wrap}
+.services-head .l .small{margin-top:14px}
+.services-head h2{max-width:560px;text-align:left}
+.tabs-wrap{background:#eef3e3;padding:34px 0 0}
+.tabs{display:flex;gap:14px;flex-wrap:wrap}
+.tab{flex:1;min-width:130px;background:var(--orange-2);color:#fff;border:0;border-radius:999px;padding:14px 20px;font:500 14px 'Inter',sans-serif;cursor:pointer;transition:.25s}
+.tab:hover{background:var(--orange)}
+.tab.active{background:var(--orange);box-shadow:0 6px 16px rgba(47,122,71,.35)}
+.panel-wrap{background:var(--cream);padding:40px 0 50px}
+.panel{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center}
+.panel .eyebrow{display:flex;align-items:center;gap:8px;font-family:'Playfair Display',serif;font-style:italic;color:#3c6a2a;font-size:14px}
+.panel h3{font-size:clamp(30px,3.4vw,40px);font-weight:500;margin:10px 0 14px}
+.panel .lead{font-size:12.5px;color:#444;max-width:330px;margin-bottom:22px}
+.feat{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}
+.feat i{width:52px;height:52px;border-radius:50%;background:#dfe6c6;display:grid;place-items:center;flex:none}
+.feat i svg{width:24px;height:24px;stroke:#2c5a2a;fill:none;stroke-width:1.6}
+.feat b{font-size:12.5px;display:block;font-weight:600}
+.feat span{font-size:11px;color:var(--muted)}
+.notes{background:var(--deep);color:#e4ede0;border-radius:10px;padding:18px 24px;font-size:15px;display:grid;gap:8px;margin-top:22px}
+.notes div::before{content:"• ";color:#8fd09a}
+.showcase{background:#e8ebcf;border-radius:26px;padding:22px;position:relative}
+.showcase .photo{height:290px;border-radius:18px}
+.showcase .g{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:#2c5a2a;margin:18px 0 4px}
+.showcase p.t{font-size:11px;color:#555;margin-bottom:16px}
+.cta-box{border:1.5px dashed #a9b98a;border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.35)}
+.cta-box svg{width:34px;height:34px;stroke:#2c7a3a;fill:none;stroke-width:1.5;flex:none}
+.cta-box b{font-size:12px}
+.cta-box p{font-size:10.5px;color:#555;margin:2px 0 8px}
+.cta-box a{font-size:11px;font-weight:600;color:var(--forest)}
+
+/* ---------- JOURNEY (dark) ---------- */
+.journey{padding:50px 0;background:var(--cream)}
+.dark-box{background:var(--deep);border-radius:34px;padding:56px 56px 70px;color:#fff;position:relative;min-height:520px}
+.dark-box .top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.dark-box h2{font-size:clamp(30px,3.6vw,46px);font-weight:500;line-height:1.2;max-width:420px}
+.dark-box .side{font-size:15px;color:#fff;max-width:390px;margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:70px;position:relative}
+.steps::before{content:"";position:absolute;left:4%;right:4%;top:6px;border-top:1px dashed rgba(255,255,255,.28)}
+.step{position:relative;padding:0 18px;border-left:1px dashed rgba(255,255,255,.22)}
+.step:first-child{border-left:0}
+.step::before{content:"";position:absolute;top:2px;left:-4px;width:9px;height:9px;border-radius:50%;background:#fff}
+.step:first-child::before{left:14px}
+.step h4{font-size:16px;font-weight:600;margin:36px 0 10px}
+.step p{font-size:15px;color:whitesmoke;line-height:1.7}
+.step small{display:block;margin-top:12px;font-size:14px;color:#7ed39a;letter-spacing:.06em;text-transform:uppercase}
+.step:nth-child(even){margin-top:100px}
+.step:nth-child(even) h4{margin-top:30px}
+.steps{padding-bottom:90px}
+
+/* ---------- SUPPORT ---------- */
+.support{border-top:1px dashed rgba(255,255,255,.25);padding-top:30px;margin-top:10px}
+.support h5{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fd8b0;font-weight:500;margin-bottom:18px}
+.sup-row{display:flex;flex-wrap:wrap;gap:14px 34px}
+.sup{display:flex;align-items:center;gap:12px;font-size:13px}
+.sup i{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.sup svg{width:19px;height:19px;stroke:#bfe8c9;fill:none;stroke-width:1.6}
+
+/* ---------- PRODUCTS ---------- */
+.products{padding:60px 0 90px}
+.p-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.p-head .h2{margin:22px 0 12px;max-width:620px}
+.cart{display:inline-flex;gap:10px;align-items:center;border:1.5px solid var(--forest);border-radius:999px;padding:10px 20px;font-size:13px;font-weight:500;color:var(--forest)}
+.cart b{background:var(--forest);color:#fff;border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:11px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prod{background:#fff;border-radius:22px;padding:14px 14px 22px;box-shadow:0 4px 18px rgba(0,0,0,.04);transition:.3s}
+.prod:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(31,61,31,.12)}
+.pimg{height:230px;border-radius:16px;position:relative;margin-bottom:18px;overflow:hidden}
+.pimg em{position:absolute;top:12px;left:12px;background:var(--forest);color:#fff;font-style:normal;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.pimg span{position:absolute;bottom:10px;right:12px;font-size:10px;color:rgba(255,255,255,.75)}
+.prod h3{font-family:'Playfair Display',serif;font-weight:500;font-size:21px;color:var(--forest);padding:0 8px}
+.prod p{font-size:12px;color:var(--muted);padding:0 8px;margin:6px 0 18px;min-height:36px}
+.prow{display:flex;justify-content:space-between;align-items:center;padding:0 8px}
+.prow b{font-size:18px;font-weight:600;color:var(--forest)}
+.add{border:0;cursor:pointer;font-family:inherit}
+.note{margin-top:28px;font-size:10.5px;color:var(--muted);background:#eef3e3;border-radius:12px;padding:12px 16px}
+
+/* ---------- FOOTER ---------- */
+footer{padding:50px 0 0;background:var(--cream);position:relative;overflow:hidden}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.logo img{display:block;width:clamp(142px,17vw,190px);height:auto;object-fit:contain}
+.foot p{font-size:12px;color:#444;max-width:210px;margin:10px 0 18px}
+.soc{display:flex;gap:10px}
+.soc a{width:34px;height:34px;border:1.5px solid var(--forest);border-radius:9px;display:grid;place-items:center}
+.soc svg{width:16px;height:16px;stroke:var(--forest);fill:none;stroke-width:1.8}
+.cols{display:flex;gap:90px}
+.cols h5{font-family:'Playfair Display',serif;font-size:15px;color:var(--forest);margin-bottom:12px}
+.cols a{display:block;font-size:12px;margin-bottom:9px;color:#333}
+.cols a:hover{color:var(--green)}
+.legal{display:flex;justify-content:space-between;font-size:10.5px;border-top:1px solid #d9d9d2;margin-top:26px;padding:14px 0;flex-wrap:wrap;gap:8px}
+.foot-mark{font-family:'Playfair Display',serif;font-weight:500;text-align:center;font-size:clamp(130px,26vw,330px);line-height:.78;color:#3f5a2a;margin-top:-6px;height:.72em;overflow:hidden;white-space:nowrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:.8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:960px){
+  .about-grid,.panel{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .thumbs{margin-top:30px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:50px}
+  .step:nth-child(even){margin-top:0}
+  .steps::before{display:none}
+  .dark-box{padding:36px 28px}
+  .hero-side,.hero-nav,.copy-s{display:none}
+}
+@media(max-width:560px){
+  .card{flex-direction:column-reverse}
+  .card .img{width:100%}
+  .steps{grid-template-columns:1fr}
+  .cols{gap:40px}
+  .hero,.hero-inner{min-height:520px}
+  .pgrid{grid-template-columns:1fr}
+}
+
+/* Page-specific adaptations of the shared Agrya visual system. */
+:root{--green:#3f5a2a;--forest:#283b1d;--cream:#fff;--ink:#171916}
+body{font-family:Helvetica,Arial,sans-serif;background:#fff}
+.hero{min-height:680px;background:linear-gradient(180deg,rgba(25,49,25,.32),rgba(25,49,25,.2) 42%,rgba(25,49,25,.62)),url("assets/flower-home-banner.webp") center 54%/cover no-repeat}
+.hero:after{display:none}
+.site-header{position:absolute;z-index:10;inset:0 0 auto;display:flex;align-items:center;padding:28px clamp(20px,4vw,62px) 0;color:#fff;font-size:12px}
+.header-side{display:flex;align-items:center;gap:2rem;flex:1}
+.header-side.right{justify-content:flex-end;gap:1.25rem}
+.header-nav{display:flex;gap:2rem;color:rgba(255,255,255,.92)}
+.brand{display:flex;align-items:center;justify-content:center;flex:1}
+.site-logo{display:block;width:clamp(8rem,12vw,12rem);height:auto;max-height:2.5rem;object-fit:contain}
+.visit-link{color:#fff;text-transform:uppercase;letter-spacing:.1em;text-decoration:underline;text-underline-offset:.25rem}
+.menu-toggle{width:2.5rem;height:2.5rem;border:0;border-radius:50%;display:grid;place-content:center;background:rgba(255,255,255,.15);color:#fff;cursor:pointer}
+.menu-toggle:hover{background:rgba(255,255,255,.27)}
+.burger{display:grid;gap:5px}.burger i{display:block;width:1rem;height:1px;background:#fff}
+.hero-inner{min-height:680px;max-width:1440px;padding:165px 28px 60px;justify-content:center;align-items:flex-start}
+.hero-eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px;color:rgba(255,255,255,.86)}
+.hero h1{max-width:1000px;text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:clamp(42px,7.3vw,74px);font-weight:400;line-height:.98;letter-spacing:-.055em;margin:0}
+.btn-pill{margin-top:34px;background:#3f5a2a;padding:15px 24px;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.btn-pill:hover{background:#283b1d}
+.slide-menu{position:fixed;inset:0 0 0 auto;z-index:20;width:min(480px,88vw);height:100dvh;padding:28px;background:rgba(24,61,43,.96);backdrop-filter:blur(18px);transform:translateX(100%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .35s ease}
+.slide-menu.open{transform:translateX(0);opacity:1;pointer-events:auto}
+.slide-menu-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.18)}
+.menu-close{width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:25px;line-height:1;cursor:pointer}
+.slide-menu-nav{display:grid;gap:18px;padding:28px 0}
+.slide-menu-nav a{font-size:clamp(26px,5vw,40px);line-height:1;color:#fff}
+.slide-menu-nav a:hover,.slide-menu-cta{color:#dce9ce}
+.slide-menu-cta{display:inline-flex;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+.band{border-top:0;margin-top:0}
+.tabs-wrap{background:#fff}
+.h2,.about h2{font-family:Helvetica,Arial,sans-serif;font-size:clamp(34px,6vw,74px);line-height:1.02;letter-spacing:-.045em;font-weight:400}
+.panel h3{font-family:Helvetica,Arial,sans-serif;font-size:clamp(30px,4vw,52px);line-height:1.05;letter-spacing:-.04em}
+.tag{background:#edf1e8}
+.about,.panel-wrap,.products{background:#fff}
+#about,#treatments{background:#fff}
+#home-sections>#treatments{position:relative;top:auto;z-index:4}
+.products#products-old{display:none}
+.about .small,.about .card:not(.dark) p,#treatments .small,#treatments .panel p:not(.notes p),#treatments .feat span,#products .agrya-product-summary p,footer .foot>div:first-child>p{color:#000;font-size:15px}
+.about .card.dark p{font-size:15px}
+.about-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;margin:22px 0 0;padding:0;list-style:none}
+.about-benefits li{position:relative;padding-left:18px;color:#000;font-size:15px;line-height:1.45}
+.about-benefits li::before{content:"";position:absolute;left:0;top:.52em;width:7px;height:7px;border-radius:50%;background:#3f5a2a}
+.about .thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,104px));gap:14px;margin-top:30px}
+.about .thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+#home-sections>.home-stack-section{position:sticky;top:0;opacity:var(--stack-opacity,1);transform:translate3d(0,var(--stack-y,0),0) scale(var(--stack-scale,1));transform-origin:center top;will-change:opacity,transform}
+#home-sections>.home-stack-section:nth-child(1){z-index:1}
+#home-sections>.home-stack-section:nth-child(2){z-index:2}
+#home-sections>.home-stack-section:nth-child(3){z-index:3}
+#home-sections>.home-stack-section:nth-child(4){z-index:4}
+#home-sections>.home-stack-section:nth-child(5){z-index:5}
+#home-sections>.home-stack-section:nth-child(6){z-index:6}
+#home-sections>.home-stack-section:nth-child(7){z-index:7}
+#home-sections>.home-stack-section:nth-child(8){z-index:8}
+#home-sections>.home-stack-section:nth-child(n+2){margin-top:0;border-radius:0;box-shadow:none}
+.band.home-stack-section{margin-bottom:0}
+@media(max-width:767px){
+  #home-sections>.home-stack-section{position:relative;top:auto;opacity:1!important;transform:none!important;will-change:auto}
+}
+#treatments .services-head{padding-top:clamp(64px,8vw,112px)}
+.agrya-product-section{width:100%;overflow:hidden;padding:clamp(48px,7vw,100px) clamp(20px,5vw,76px);background:#f8f8f7}
+.agrya-product-layout{width:min(1440px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);align-items:center;gap:clamp(35px,5.4vw,82px)}
+.agrya-product-visual{height:clamp(400px,48vw,700px);position:relative;overflow:hidden;border-radius:28px;background:#e8eadf}
+.agrya-product-visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.agrya-product-content{min-width:0}
+.agrya-section-label{margin:0 0 25px;font-size:15px}
+.agrya-product-title{margin:0;max-width:660px;font-size:clamp(34px,5.5vw,74px);font-weight:400;line-height:1.02;letter-spacing:-.055em}
+.agrya-product-marks{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 28px;color:#777b72;font-size:13px}
+.agrya-product-marks .mark{color:var(--forest);font-size:16px;margin-right:4px}
+.agrya-featured-details{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;margin-top:32px}
+.agrya-product-summary{max-width:460px;flex:1 1 auto;min-width:0}
+.agrya-product-summary h3{margin:0 0 12px;font-size:clamp(23px,2.35vw,33px);line-height:1.2;font-weight:400;letter-spacing:-.04em}
+.agrya-product-summary p{margin:0 0 20px;color:#72766f;font-size:14px;line-height:1.7}
+.agrya-shop-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:8px 32px;border:0;border-radius:999px;background:#3f5a2a;color:#fff;font-size:15px;font-weight:600}
+.agrya-slider{flex:0 0 clamp(105px,15vw,205px);width:clamp(105px,15vw,205px);position:relative;padding-bottom:30px}
+.agrya-slider-viewport{overflow:hidden;width:100%;border-radius:15px;background:#e8eadf}
+.agrya-slider-track{display:flex;transition:transform .38s cubic-bezier(.2,.75,.25,1)}
+.agrya-mini-product{min-width:100%;width:100%;aspect-ratio:3/4;border:0;padding:0;background:#e8eadf;cursor:pointer;overflow:hidden}
+.agrya-mini-product img{width:100%;height:100%;display:block;object-fit:cover}
+.agrya-slider-controls{position:absolute;right:0;bottom:0;display:flex;align-items:center;gap:7px}
+.agrya-slider-controls button{width:27px;height:27px;display:grid;place-items:center;border:1px solid #d9ddd3;border-radius:50%;background:#fff;color:var(--forest);cursor:pointer}
+.agrya-slider-count{margin-right:4px;color:#73786e;font-size:11px;font-variant-numeric:tabular-nums}
+footer{font-size:13px}
+footer .foot>div:first-child>p,footer .cols a,footer .legal{font-size:12px}
+@media(max-width:900px){
+  .header-nav,.visit-link{display:none}
+  .agrya-product-layout{gap:30px;grid-template-columns:minmax(0,.95fr) minmax(0,1fr)}
+  .agrya-featured-details{flex-direction:column}
+  .agrya-slider{width:135px;flex-basis:135px;align-self:flex-end}
+}
+@media(max-width:650px){
+  .hero,.hero-inner{min-height:580px}
+  .hero-inner{padding:140px 22px 48px;align-items:flex-start}
+  .hero h1{font-size:clamp(42px,11vw,64px);line-height:1.02}
+  .hero-eyebrow{font-size:10px;letter-spacing:.12em}
+  .site-header{padding:22px 20px 0}
+  .brand{justify-content:flex-start}
+  .header-side{justify-content:flex-end}
+  .agrya-product-section{padding:38px 18px 50px}
+  .agrya-product-layout{grid-template-columns:1fr;gap:28px}
+  .agrya-product-visual{height:auto;aspect-ratio:4/4.2;border-radius:21px}
+  .agrya-product-content{padding:0 2px}
+  .agrya-product-title{font-size:clamp(35px,9vw,52px)}
+  .agrya-featured-details{flex-direction:row;align-items:flex-end;gap:18px;margin-top:20px}
+  .agrya-product-summary h3{font-size:23px}
+  .agrya-product-summary p{font-size:13px}
+  .agrya-slider{width:112px;flex-basis:112px;padding-bottom:28px}
+  .card .img{width:100%;min-width:0;height:auto;aspect-ratio:16/10;object-fit:cover}
+  .agrya-footer__logo{height:auto;aspect-ratio:120/55;object-fit:contain}
+}
+@media(max-width:390px){
+  .agrya-featured-details{align-items:flex-start;flex-direction:column}
+  .agrya-slider{align-self:flex-end;width:105px;flex-basis:105px}
+}
+@media(max-width:650px){.about-benefits{grid-template-columns:1fr;gap:9px}.about .thumbs{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.about .thumbs img{max-width:104px}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}#home-sections>.home-stack-section{opacity:1!important;transform:none!important;transition:none;will-change:auto;position:relative;top:auto}}
+html{scroll-padding-top:76px}
+.site-header{position:fixed;inset:0 0 auto;z-index:1000;padding:12px clamp(16px,4vw,62px);background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+body .site-header.is-scrolled{background:rgba(24,61,43,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.slide-menu{z-index:1100}
+#home-sections>#hero.home-stack-section{position:relative!important;top:auto!important;z-index:1;opacity:1!important;transform:none!important}
+.agrya-footer{position:relative;z-index:8;padding:clamp(36px,5vw,60px) clamp(22px,5vw,72px) 18px;overflow:visible;background:#f6f4ed;color:#26351f;border-top:1px solid rgba(40,59,29,.14);font-family:Inter,Arial,sans-serif}
+.agrya-footer *{box-sizing:border-box}
+.agrya-footer__inner{width:min(1180px,100%);margin:0 auto}
+.agrya-footer__grid{display:grid;grid-template-columns:minmax(240px,1.45fr) minmax(150px,.75fr) minmax(220px,1fr);gap:clamp(28px,4vw,60px);padding-bottom:30px}
+.agrya-footer__brand{max-width:360px}
+.agrya-footer__logo{display:block;width:clamp(142px,17vw,190px);height:auto;margin:0 0 18px;mix-blend-mode:multiply}
+.agrya-footer__tagline,.agrya-footer__contact p{max-width:320px;margin:0;color:#66715f;font-size:14px;line-height:1.7}
+.agrya-footer__eyebrow{display:block;margin:6px 0 18px;color:#8b805f;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.agrya-footer__links,.agrya-footer__contact{display:grid;justify-items:start;align-content:start;gap:11px}
+.agrya-footer__links a,.agrya-footer__contact a{color:#33412d;font-size:14px;line-height:1.5}
+.agrya-footer__links a:hover,.agrya-footer__contact a:hover{color:#7c8751}
+.agrya-footer__bottom{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:16px;border-top:1px solid rgba(40,59,29,.16);color:#788071;font-size:12px;line-height:1.6}
+.agrya-footer__bottom p{margin:0}
+.agrya-footer__bottom a{color:#526044}
+.agrya-footer__wordmark{margin-top:8px;color:rgba(63,90,42,.58);font-family:'Playfair Display',serif;font-size:clamp(100px,24vw,250px);font-weight:500;line-height:1.1;text-align:center;white-space:nowrap}
+@media(max-width:700px){.agrya-footer{padding:36px 22px 16px}.agrya-footer__grid{grid-template-columns:1fr 1fr;gap:26px 24px;padding-bottom:24px}.agrya-footer__brand{grid-column:1/-1}}
+@media(max-width:380px){.agrya-footer__grid{grid-template-columns:1fr}.agrya-footer__brand{grid-column:auto}}
+html.heading-motion-ready body :is(h1,h2,h3,h4,h5):not(.hero h1){font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1;letter-spacing:-.05em;opacity:0;transform:translate3d(0,20px,0);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+html.heading-motion-ready body :is(h1,h2,h3,h4,h5):not(.hero h1).heading-motion-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.heading-motion-ready body :is(h1,h2,h3,h4,h5):not(.hero h1){opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-side">
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#treatments">Panchakarma</a>
+      <a href="index.html#therapies">Treatments</a>
+    </nav>
+  </div>
+  <a class="brand" href="index.html#hero" aria-label="Agrya Ayurveda home">
+    <img class="site-logo" src="https://agryaayurveda.co.in/wp-content/uploads/2026/01/Agrya-white-logo-2.svg" alt="Agrya Ayurveda">
+  </a>
+  <div class="header-side right">
+    <a class="visit-link" href="index.html#contact">Contact us</a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="slide-menu">
+      <span class="burger"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+<aside class="slide-menu" id="slide-menu" aria-hidden="true">
+  <div class="slide-menu-head">
+    <img class="site-logo" src="https://agryaayurveda.co.in/wp-content/uploads/2026/01/Agrya-white-logo-2.svg" alt="Agrya Ayurveda">
+    <button class="menu-close" id="menu-close" type="button" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="slide-menu-nav" aria-label="Menu">
+    <a href="index.html#hero">Home</a>
+    <a href="#treatments">Panchakarma</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#therapies">Treatments</a>
+    <a href="index.html#contact">Contact Us</a>
+  </nav>
+</aside>
+<!-- HERO -->
+<main id="home-sections">
+<section class="hero home-stack-section" id="hero" aria-label="Panchakarma at Agrya Ayurveda">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Traditional wisdom · Thoughtful clinical care</p>
+    <h1>Discover the transformative<br>power of Panchakarma</h1>
+    <a href="index.html#contact" class="btn-pill">Book a consultation <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<!-- TAG BAND -->
+<div class="band home-stack-section" aria-hidden="true">
+  <div class="band-track">
+    <span><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>Deep Detox</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>Emotional Healing</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M5.6 18.4l2-2M16.4 7.6l2-2"/></svg>Inner Work</span>
+    <span><svg viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>Burnout Recovery</span>
+    <span><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg>Sound Sleep</span>
+    <span><svg viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 11-11"/></svg>Stress Relief</span>
+    <span><svg viewBox="0 0 24 24"><path d="M6 6a2 2 0 1 1 3 2l7 7a2 2 0 1 1 2 3 2 2 0 1 1-3-2L8 9a2 2 0 0 1-2-3z"/></svg>Joint &amp; Mobility Care</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C12 6 10 4 12 3c2 1 0 3 0 6.5zM14.5 12c3.5 0 5.5-2 6.5 0-1 2-3 0-6.5 0zM12 14.5c0 3.5 2 5.5 0 6.5-2-1 0-3 0-6.5zM9.5 12c-3.5 0-5.5 2-6.5 0 1-2 3 0 6.5 0z"/></svg>Skin Glow</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>Digestive Health</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Immunity Boost</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3l2.5 6 6.5.5-5 4.2 1.7 6.3L12 16.5 6.3 20l1.7-6.3-5-4.2L9.5 9z"/></svg>Healthy Ageing</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>Hormonal Balance</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>Deep Detox</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>Emotional Healing</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M5.6 18.4l2-2M16.4 7.6l2-2"/></svg>Inner Work</span>
+    <span><svg viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>Burnout Recovery</span>
+    <span><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg>Sound Sleep</span>
+    <span><svg viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 11-11"/></svg>Stress Relief</span>
+    <span><svg viewBox="0 0 24 24"><path d="M6 6a2 2 0 1 1 3 2l7 7a2 2 0 1 1 2 3 2 2 0 1 1-3-2L8 9a2 2 0 0 1-2-3z"/></svg>Joint &amp; Mobility Care</span>
+    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C12 6 10 4 12 3c2 1 0 3 0 6.5zM14.5 12c3.5 0 5.5-2 6.5 0-1 2-3 0-6.5 0zM12 14.5c0 3.5 2 5.5 0 6.5-2-1 0-3 0-6.5zM9.5 12c-3.5 0-5.5 2-6.5 0 1-2 3 0 6.5 0z"/></svg>Skin Glow</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>Digestive Health</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Immunity Boost</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 3l2.5 6 6.5.5-5 4.2 1.7 6.3L12 16.5 6.3 20l1.7-6.3-5-4.2L9.5 9z"/></svg>Healthy Ageing</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>Hormonal Balance</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about home-stack-section" id="about">
+  <div class="wrap about-grid">
+    <div class="rv">
+      <span class="tag">Clinical Therapies</span>
+      <h2>Our Specialized Ayurvedic Care</h2>
+      <p class="small">Evidence-aware traditional therapies tailored to individual constitution and pathological status.</p>
+      <ul class="about-benefits">
+        <li>Detoxifies the body and removes toxins</li>
+        <li>Improves digestion and metabolism</li>
+        <li>Boosts energy and immunity</li>
+        <li>Reduces stress and promotes mental clarity</li>
+        <li>Enhances skin health and natural glow</li>
+        <li>Restores balance of mind, body and soul</li>
+      </ul>
+      <div class="thumbs">
+        <img src="https://agryaayurveda.co.in/wp-content/uploads/2026/10/stress-relief.jpg" alt="Stress relief and relaxation" loading="lazy">
+        <img src="https://agryaayurveda.co.in/wp-content/uploads/2026/10/mindful-eating.jpg" alt="Mindful eating" loading="lazy">
+        <img src="https://agryaayurveda.co.in/wp-content/uploads/2026/10/sleep.webp" alt="Restful sleep" loading="lazy">
+      </div>
+    </div>
+    <div class="cards rv">
+      <div class="card">
+        <div><h3>Panchakarma Chikitsa</h3><p>Bio-purification therapies that eliminate deeply seated metabolic toxins, enhance digestive fire, and re-establish equilibrium for preventive and chronic health care.</p></div>
+        <img class="img" src="https://agryaayurveda.co.in/wp-content/uploads/2026/09/medicine.webp" alt="Ayurvedic medicine prepared for Panchakarma chikitsa" loading="lazy">
+      </div>
+      <div class="card dark">
+        <div><h3>Keraleeya Chikitsa</h3><p>Authentic Kerala Ayurveda procedures focused on musculoskeletal conditions, neurological restoration, chronic joint pain relief, and long-term physical rehabilitation.</p></div>
+        <img class="img" src="https://agryaayurveda.co.in/wp-content/uploads/2026/10/keraleeya-chikiltsa.webp" alt="Keraleeya Chikitsa therapy" loading="lazy">
+      </div>
+      <div class="card">
+        <div><h3>Swasthya Raksha &amp; Rasayana</h3><p>Rejuvenation therapies that enhance systemic vitality, strengthen host immunity (Ojas), reduce mental exhaustion, and nurture healthy graceful aging.</p></div>
+        <img class="img" src="https://agryaayurveda.co.in/wp-content/uploads/2026/10/rejuniation.jpg" alt="Rejuvenation therapy for Swasthya Raksha and Rasayana" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 SERVICES -->
+<section class="home-stack-section" id="treatments">
+  <div class="wrap services-head">
+    <div class="l rv">
+      <span class="tag">Treatments</span>
+      <p class="small">Five classical procedures, each targeting a specific dosha and set of conditions.</p>
+    </div>
+    <h2 class="h2 rv">Explore Dosha, Season, and Healing with Us</h2>
+  </div>
+
+  <div class="tabs-wrap">
+    <div class="wrap">
+      <div class="tabs" role="tablist" id="tabs">
+        <button class="tab active" data-k="vamana">Vamana</button>
+        <button class="tab" data-k="virechana">Virechana</button>
+        <button class="tab" data-k="basti">Basti</button>
+        <button class="tab" data-k="nasya">Nasya</button>
+        <button class="tab" data-k="raktamokshana">Raktamokshana</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-wrap" id="therapy-details">
+    <div class="wrap panel" id="panel">
+      <div>
+        <div class="eyebrow">🌿 <span id="p-eye"></span></div>
+        <h3 id="p-title"></h3>
+        <p class="lead" id="p-lead"></p>
+        <div class="feat"><i><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.500"/><path d="M3 20c0-3.500 3-6 6-6s6 2.500 6 6M15 15c3 0 6 1.500 6 5"/></svg></i><div><b id="f1t"></b><span id="f1d"></span></div></div>
+        <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 11-11"/></svg></i><div><b id="f2t"></b><span id="f2d"></span></div></div>
+        <div class="notes" id="p-notes"></div>
+      </div>
+      <div class="showcase">
+        <div class="photo ph" id="p-photo"></div>
+        <div class="g">🍃 <span id="s-t"></span></div>
+        <p class="t" id="s-d"></p>
+        <div class="cta-box">
+          <svg viewBox="0 0 24 24"><path d="M6 11h12l-1.500 9h-9zM12 11V6M12 6c0-2 2-3 4-3 0 2-2 3-4 3zM12 8c0-2-2-3-4-3 0 2 2 3 4 3z"/></svg>
+          <div><b>Begin Your Programme</b><p>Your vaidya will guide you step by step, from assessment to aftercare.</p><a href="index.html#contact">Get Started →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey home-stack-section" id="pricing">
+  <div class="wrap">
+    <div class="dark-box rv">
+      <div class="top">
+        <h2>Your Panchakarma Journey as One System</h2>
+        <p class="side">A typical programme runs 7 to 28 days depending on your constitution and condition. Every stage is supervised and adjusted daily.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h4>Consultation &amp; Prakriti Assessment</h4><p>Pulse, tongue and history review by your vaidya to identify your dosha balance and select the right therapies.</p><small>Day 0</small></div>
+        <div class="step"><h4>Purvakarma</h4><p>Internal and external oleation with medicated ghee and oils, followed by herbal steam to prepare the body.</p><small>Days 1–7</small></div>
+        <div class="step"><h4>Pradhana Karma</h4><p>The main cleansing procedure is carried out under close medical observation, with rest and light diet.</p><small>Days 8–14</small></div>
+        <div class="step"><h4>Paschat Karma</h4><p>Gradual return to normal food, rasayana support and lifestyle guidance to keep the benefits lasting.</p><small>Days 15+</small></div>
+      </div>
+      <div class="support">
+        <h5>Additional Supportive Therapies</h5>
+        <div class="sup-row">
+          <div class="sup"><i><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></i><span>Abhyanga</span></div>
+          <div class="sup"><i><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg></i><span>Shirodhara</span></div>
+          <div class="sup"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M5.6 18.4l2-2M16.4 7.6l2-2"/></svg></i><span>Pizhichil</span></div>
+          <div class="sup"><i><svg viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 11-11"/></svg></i><span>Njavarakizhi</span></div>
+          <div class="sup"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C12 6 10 4 12 3c2 1 0 3 0 6.5zM14.5 12c3.5 0 5.5-2 6.5 0-1 2-3 0-6.5 0zM12 14.5c0 3.5 2 5.5 0 6.5-2-1 0-3 0-6.5zM9.5 12c-3.5 0-5.5 2-6.5 0 1-2 3 0 6.5 0z"/></svg></i><span>Udvartana</span></div>
+          <div class="sup"><i><svg viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg></i><span>Swedana</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products-old" aria-hidden="true">
+  <div class="wrap">
+    <div class="p-head rv">
+      <div>
+        <span class="tag">Agrya Store</span>
+        <h2 class="h2">Renowned Agrya Ayurvedic Products</h2>
+        <p class="small">Classical formulations prepared with authentic herbs, to continue your care at home.</p>
+      </div>
+      <a href="#" class="cart">Cart <b id="cartN">0</b></a>
+    </div>
+    <div class="pgrid rv">
+      <article class="prod">
+        <div class="pimg ph ph-sunrise"><em>Bestseller</em><span>Stock image</span></div>
+        <h3>Kumkumadi Thailam</h3><p>Facial glow oil with saffron and sandalwood</p>
+        <div class="prow"><b>₹1,150</b><button class="btn-green add" data-n="Kumkumadi Thailam">Add to Cart</button></div>
+      </article>
+      <article class="prod">
+        <div class="pimg ph ph-oil"><em>Immunity</em><span>Stock image</span></div>
+        <h3>Agrya Chyawanprash</h3><p>Classic immunity rasayana, 500 g</p>
+        <div class="prow"><b>₹620</b><button class="btn-green add" data-n="Agrya Chyawanprash">Add to Cart</button></div>
+      </article>
+      <article class="prod">
+        <div class="pimg ph ph-herb"><em>Stress Care</em><span>Stock image</span></div>
+        <h3>Ashwagandha Capsules</h3><p>Calm, stamina and stress support, 60 caps</p>
+        <div class="prow"><b>₹480</b><button class="btn-green add" data-n="Ashwagandha Capsules">Add to Cart</button></div>
+      </article>
+      <article class="prod">
+        <div class="pimg ph ph-garden"><em>Digestion</em><span>Stock image</span></div>
+        <h3>Triphala Churna</h3><p>Gentle daily digestive cleanse, 200 g</p>
+        <div class="prow"><b>₹260</b><button class="btn-green add" data-n="Triphala Churna">Add to Cart</button></div>
+      </article>
+      <article class="prod">
+        <div class="pimg ph ph-field"><em>Joint Care</em><span>Stock image</span></div>
+        <h3>Dhanwantharam Thailam</h3><p>Warm oil for Vata and joint comfort, 200 ml</p>
+        <div class="prow"><b>₹540</b><button class="btn-green add" data-n="Dhanwantharam Thailam">Add to Cart</button></div>
+      </article>
+      <article class="prod">
+        <div class="pimg ph ph-lotus"><em>Mind &amp; Sleep</em><span>Stock image</span></div>
+        <h3>Brahmi Ghrita</h3><p>Medicated ghee for memory and calm focus</p>
+        <div class="prow"><b>₹720</b><button class="btn-green add" data-n="Brahmi Ghrita">Add to Cart</button></div>
+      </article>
+    </div>
+    <p class="note">Products support wellness and are not a substitute for medical advice. Prices shown are placeholders.</p>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="agrya-product-section rv home-stack-section" id="products" aria-label="Featured Agrya Ayurveda product">
+  <div class="agrya-product-layout">
+    <div class="agrya-product-visual"><img id="agrya-main-image" src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Ayurvedic herbal oil and botanical ingredients"></div>
+    <div class="agrya-product-content">
+      <p class="agrya-section-label">Our reowned products</p>
+      <h2 class="agrya-product-title" id="agrya-product-title">Traditional care for everyday comfort</h2>
+      <div class="agrya-product-marks"><span><span class="mark">✦</span> Ayurveda-inspired</span><span><span class="mark">⌁</span> External use</span><span><span class="mark">♧</span> Herbal care</span></div>
+      <div class="agrya-featured-details">
+        <div class="agrya-product-summary">
+          <h3 id="agrya-product-name">Ayurvedic Back Care Thailam</h3>
+          <p id="agrya-product-description">A traditional massage oil for external use as part of your personal care routine. Review the product label and consult a qualified practitioner to confirm whether it is suitable for you.</p>
+          <a class="agrya-shop-button" id="agrya-shop-button" href="/shop/">Shop now <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="agrya-slider" aria-label="Explore more Agrya products">
+          <div class="agrya-slider-viewport"><div class="agrya-slider-track" id="agrya-slider-track">
+            <button class="agrya-mini-product" type="button" data-index="0" aria-label="View Ayurvedic Back Care Thailam"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Ayurvedic oil and herbs" loading="lazy"></button>
+            <button class="agrya-mini-product" type="button" data-index="1" aria-label="View Joint Comfort Thailam"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Natural care product bottles" loading="lazy"></button>
+            <button class="agrya-mini-product" type="button" data-index="2" aria-label="View Herbal Body Massage Oil"><img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Herbal personal care product" loading="lazy"></button>
+            <button class="agrya-mini-product" type="button" data-index="3" aria-label="View Ayurvedic Herbal Oil"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Botanical oil and ingredients" loading="lazy"></button>
+          </div></div>
+          <div class="agrya-slider-controls"><span class="agrya-slider-count" id="agrya-slider-count">01 / 04</span><button type="button" id="agrya-prev" aria-label="Previous product">‹</button><button type="button" id="agrya-next" aria-label="Next product">›</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="agrya-footer" id="site-footer">
+  <div class="agrya-footer__inner">
+    <div class="agrya-footer__grid">
+      <div class="agrya-footer__brand">
+        <a href="index.html#hero" aria-label="Agrya Ayurveda home">
+          <img class="agrya-footer__logo" src="https://agryaayurveda.co.in/wp-content/uploads/2026/10/Agrya-logo.png" alt="Agrya Ayurveda - Health at its peak" loading="lazy">
+        </a>
+        <p class="agrya-footer__tagline">Rooted in Ayurvedic wisdom. Thoughtfully designed around you, your health and your journey to wellbeing.</p>
+      </div>
+      <nav class="agrya-footer__links" aria-label="Main navigation">
+        <span class="agrya-footer__eyebrow">Explore</span>
+        <a href="index.html#hero">Home</a>
+        <a href="#treatments">Panchakarma</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#therapies">Treatments</a>
+        <a href="index.html#contact">Contact Us</a>
+      </nav>
+      <div class="agrya-footer__contact">
+        <span class="agrya-footer__eyebrow">Get in touch</span>
+        <p>Have a question or ready to begin? Our team is here to help you take the next step.</p>
+        <a href="tel:+919846378011">+91 98463 78011</a>
+        <a href="mailto:agrya063@gmail.com">agrya063@gmail.com</a>
+      </div>
+    </div>
+    <div class="agrya-footer__bottom">
+      <p>&copy; 2026 Agrya Ayurveda. All rights reserved.</p>
+      <a href="index.html#hero">Back to top &#8593;</a>
+    </div>
+    <div class="agrya-footer__wordmark" aria-hidden="true">Agrya</div>
+  </div>
+</footer>
+</main>
+ 
+<script>
+const data = {
+  vamana:{eye:"Cleanse Deeply",title:"Vamana",lead:"Therapeutic emesis that clears excess Kapha from the chest and stomach, supported by careful preparation and recovery.",
+    f1:["Kapha Relief","Eases congestion, heaviness and sluggish digestion."],f2:["Respiratory Support","Traditionally used for asthma, allergies and chronic cold."],
+    notes:["Best taken in spring (Vasanta ritu)","Needs 5–7 days of snehana and swedana first","Followed by a gentle peya and light diet"],
+    st:"Clear Kapha, Breathe Easy",sd:"Medicated herbal decoctions bring up accumulated Kapha under your vaidya's supervision.",image:"https://agryaayurveda.co.in/wp-content/uploads/2026/10/vamana_img.webp"},
+  virechana:{eye:"Purify Naturally",title:"Virechana",lead:"Controlled purgation with herbal formulations that cleanses Pitta from the liver, gut and blood.",
+    f1:["Pitta Balance","Calms acidity, inflammation and skin flare-ups."],f2:["Liver &amp; Gut Care","Supports digestion, metabolism and clarity of skin."],
+    notes:["Ideal in autumn (Sharad ritu)","Preceded by oleation with medicated ghee","Light, warm diet is followed for several days"],
+    st:"Cool the Fire Within",sd:"A gentle, supervised purgation resets digestion and releases excess heat from the body.",image:"https://agryaayurveda.co.in/wp-content/uploads/2026/10/virechana.jpg"},
+  basti:{eye:"Nourish &amp; Ground",title:"Basti",lead:"Medicated oil and decoction enemas, regarded as the most important therapy for balancing Vata.",
+    f1:["Vata Regulation","Helps joint pain, constipation and nervous exhaustion."],f2:["Deep Nourishment","Strengthens tissues and supports healthy colon function."],
+    notes:["Given as a course, often 8, 15 or 30 days","Anuvasana (oil) and Niruha (decoction) types","Suitable through most of the year"],
+    st:"Ground the Wind",sd:"Warm herbal preparations settle Vata where it gathers, in the colon, and nourish the whole system.",image:"https://agryaayurveda.co.in/wp-content/uploads/2026/10/basti.jpg"},
+  nasya:{eye:"Clear the Head",title:"Nasya",lead:"Herbal oils and powders administered through the nostrils to cleanse and nourish the head and neck region.",
+    f1:["Sinus &amp; Head Relief","Supports sinusitis, migraine and tension headaches."],f2:["Mind &amp; Senses","Promotes clarity, better sleep and calm focus."],
+    notes:["Preceded by gentle face and neck massage","Short sessions, usually 7 to 14 days","Best done in the morning on an empty stomach"],
+    st:"Open the Gateway",sd:"The nose is the doorway to the head in Ayurveda; Nasya clears it gently and restores balance.",image:"assets/Nasya treatment.webp"},
+  raktamokshana:{eye:"Purify the Blood",title:"Raktamokshana",lead:"Classical blood-purification techniques used for skin and Pitta-related disorders, performed only by trained physicians.",
+    f1:["Skin Clarity","Used for chronic eczema, psoriasis and localised conditions."],f2:["Targeted Detox","Releases vitiated blood from the affected area."],
+    notes:["Chosen only after careful clinical evaluation","Methods include jalauka (leech) therapy","Performed in a sterile, supervised setting"],
+    st:"Cleanse at the Source",sd:"A precise, specialist therapy that clears stagnation in the blood for lasting relief.",image:"assets/rakthamoksha.webp"}
+};
+const $=id=>document.getElementById(id);
+function show(k){
+  const d=data[k];
+  $('p-eye').innerHTML=d.eye;$('p-title').textContent=d.title;$('p-lead').textContent=d.lead;
+  $('f1t').innerHTML=d.f1[0];$('f1d').innerHTML=d.f1[1];
+  $('f2t').innerHTML=d.f2[0];$('f2d').innerHTML=d.f2[1];
+  $('p-notes').innerHTML=d.notes.map(n=>'<div>'+n+'</div>').join('');
+  $('s-t').textContent=d.st;$('s-d').textContent=d.sd;
+  const photo=$('p-photo');
+  photo.className='photo ph '+(d.ph||'');
+  photo.style.backgroundImage=d.image?'url("'+d.image+'")':'';
+  photo.style.backgroundPosition='center';
+  photo.style.backgroundSize='cover';
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.k===k));
+}
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b)show(b.dataset.k)});
+const requestedTherapy=new URLSearchParams(window.location.search).get('therapy');
+if(Object.prototype.hasOwnProperty.call(data,requestedTherapy)){
+  show(requestedTherapy);
+}else{
+  show('vamana');
+}
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const motionHeadings=[...document.querySelectorAll('h1,h2,h3,h4,h5')].filter(heading=>!heading.closest('.hero'));
+document.documentElement.classList.add('heading-motion-ready');
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){
+  motionHeadings.forEach(heading=>heading.classList.add('heading-motion-visible'));
+}else{
+  const headingObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('heading-motion-visible');
+      headingObserver.unobserve(entry.target);
+    }
+  }),{threshold:.15});
+  motionHeadings.forEach(heading=>headingObserver.observe(heading));
+}
+const stackSections=[...document.querySelectorAll('#home-sections>.home-stack-section')];
+let stackFrame=0;
+function updateStackState(){
+  stackFrame=0;
+  stackSections.forEach((section,index)=>{
+    const next=stackSections[index+1];
+    const progress=next?Math.max(0,Math.min(1,(100-next.getBoundingClientRect().top)/240)):0;
+    section.style.setProperty('--stack-opacity',String(1-progress*.32));
+    section.style.setProperty('--stack-y',`${-progress*8}px`);
+    section.style.setProperty('--stack-scale',String(1-progress*.025));
+  });
+}
+function scheduleStackUpdate(){if(!stackFrame)stackFrame=requestAnimationFrame(updateStackState)}
+window.addEventListener('scroll',scheduleStackUpdate,{passive:true});
+window.addEventListener('resize',scheduleStackUpdate);
+updateStackState();
+
+const menu=document.getElementById('slide-menu');
+const menuToggle=document.getElementById('menu-toggle');
+const menuClose=document.getElementById('menu-close');
+function setMenuOpen(open){
+ menu.classList.toggle('open',open);
+ menu.setAttribute('aria-hidden',String(!open));
+ menuToggle.setAttribute('aria-expanded',String(open));
+}
+menuToggle.addEventListener('click',()=>setMenuOpen(true));
+menuClose.addEventListener('click',()=>setMenuOpen(false));
+menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenuOpen(false)));
+document.addEventListener('keydown',event=>{if(event.key==='Escape')setMenuOpen(false)});
+
+const products=[
+ {title:'Traditional care for everyday comfort',name:'Ayurvedic Back Care Thailam',description:'A traditional massage oil for external use as part of your personal care routine. Review the product label and consult a qualified practitioner to confirm whether it is suitable for you.',image:'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85',url:'/shop/'},
+ {title:'Thoughtful care for joints and movement',name:'Joint Comfort Thailam',description:'A traditional external-use massage oil option. Check the ingredients and product directions, and ask your practitioner whether it is appropriate for your needs.',image:'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85',url:'/shop/'},
+ {title:'Make time for a restorative ritual',name:'Herbal Body Massage Oil',description:'An oil for a considered massage routine. Follow the product label and check for sensitivities before use.',image:'https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1200&q=85',url:'/shop/'},
+ {title:'Bring botanical care into your routine',name:'Ayurvedic Herbal Oil',description:'Explore a traditional herbal oil for external care. Confirm ingredients, directions and suitability with the product information or your practitioner.',image:'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=1200&q=85',url:'/shop/'}
+];
+const mainProductImage=document.getElementById('agrya-main-image');
+const productButtons=[...document.querySelectorAll('.agrya-mini-product')];
+let activeProduct=0;
+function showProduct(index){
+ activeProduct=(index+products.length)%products.length;
+ const product=products[activeProduct];
+ document.getElementById('agrya-product-title').textContent=product.title;
+ document.getElementById('agrya-product-name').textContent=product.name;
+ document.getElementById('agrya-product-description').textContent=product.description;
+ document.getElementById('agrya-shop-button').href=product.url;
+ mainProductImage.style.display='';
+ mainProductImage.src=product.image;
+ mainProductImage.alt=product.name;
+ mainProductImage.onerror=()=>{mainProductImage.style.display='none'};
+ document.getElementById('agrya-slider-track').style.transform=`translateX(-${activeProduct*100}%)`;
+ document.getElementById('agrya-slider-count').textContent=`${String(activeProduct+1).padStart(2,'0')} / ${String(products.length).padStart(2,'0')}`;
+ productButtons.forEach((button,index)=>button.setAttribute('aria-current',String(index===activeProduct)));
+}
+productButtons.forEach(button=>button.addEventListener('click',()=>showProduct(Number(button.dataset.index))));
+document.getElementById('agrya-prev').addEventListener('click',()=>showProduct(activeProduct-1));
+document.getElementById('agrya-next').addEventListener('click',()=>showProduct(activeProduct+1));
+showProduct(0);
+</script>
+<script>
+const stickyHeader=document.querySelector('.site-header');
+const updateStickyHeader=()=>{
+  const isScrolled=window.scrollY>24;
+  stickyHeader.classList.toggle('is-scrolled',isScrolled);
+  stickyHeader.style.setProperty('background',isScrolled?'rgba(24,61,43,.92)':'transparent','important');
+  stickyHeader.style.backdropFilter=isScrolled?'blur(14px)':'none';
+  stickyHeader.style.webkitBackdropFilter=isScrolled?'blur(14px)':'none';
+};
+window.addEventListener('scroll',updateStickyHeader,{passive:true});
+updateStickyHeader();
+</script>
+</body>
+</html>

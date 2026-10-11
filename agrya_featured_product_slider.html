@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agrya Ayurveda | Featured Product</title>
+<style>
+:root{--green:#283b1d;--deep:#29440f;--accent:#3F5A2A;--bg:#f8f8f7;--muted:#72766f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#171916;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}
+.agrya-product-section{width:100%;overflow:hidden;padding:clamp(35px,5vw,78px) clamp(20px,4.5vw,70px);background:var(--bg)}
+.agrya-product-layout{width:min(1440px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);align-items:center;gap:clamp(35px,5.4vw,82px)}
+.agrya-product-visual{height:clamp(420px,48vw,740px);position:relative;overflow:hidden;border-radius:28px;background:#e8eadf}
+.agrya-product-visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .4s ease}.agrya-product-visual:hover img{transform:scale(1.025)}
+.agrya-product-content{min-width:0}.agrya-section-label{display:flex;align-items:center;gap:11px;margin:0 0 28px;font-size:15px}
+.agrya-section-number{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;border-radius:50%;background:#050505;color:#fff;font-size:22px;font-weight:700;letter-spacing:-.04em}
+.agrya-product-title{margin:0;max-width:660px;font-size:clamp(36px,4.1vw,61px);font-weight:400;line-height:1.17;letter-spacing:-.055em}
+.agrya-product-marks{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 28px;color:#777b72;font-size:13px}.agrya-product-marks .mark{color:var(--green);font-size:16px;margin-right:4px}
+.agrya-featured-details{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;margin-top:32px}
+.agrya-product-summary{max-width:460px;flex:1 1 auto;min-width:0}.agrya-product-summary h3{margin:0 0 12px;font-size:clamp(23px,2.35vw,33px);line-height:1.2;font-weight:400;letter-spacing:-.04em}
+.agrya-product-summary p{margin:0 0 20px;color:var(--muted);font-size:14px;line-height:1.7}
+.agrya-shop-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:14px 25px;border:0;border-radius:999px;background:var(--accent);color:white;font-size:13px;font-weight:600;transition:transform .2s,background .2s}.agrya-shop-button:hover{transform:translateY(-2px);background:#344b23}.agrya-shop-button .arrow{font-size:17px}
+.agrya-product-slider{flex:0 0 clamp(105px,15vw,205px);width:clamp(105px,15vw,205px);position:relative;padding-bottom:30px}
+.agrya-slider-viewport{overflow:hidden;width:100%;border-radius:15px;background:#e8eadf}.agrya-slider-track{display:flex;transition:transform .38s cubic-bezier(.2,.75,.25,1);will-change:transform}
+.agrya-mini-product{min-width:100%;width:100%;aspect-ratio:3/4;border:0;padding:0;background:#e8eadf;cursor:pointer;overflow:hidden}
+.agrya-mini-product img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .3s}.agrya-mini-product:hover img{transform:scale(1.04)}
+.agrya-slider-controls{position:absolute;right:0;bottom:0;display:flex;align-items:center;gap:7px}.agrya-slider-controls button{width:25px;height:25px;display:grid;place-items:center;border:1px solid #d9ddd3;border-radius:50%;background:white;color:var(--green);cursor:pointer;font-size:13px}.agrya-slider-controls button:hover{background:var(--green);color:white}
+.agrya-slider-count{margin-right:4px;color:#73786e;font-size:11px;font-variant-numeric:tabular-nums}.agrya-product-hint{margin-top:15px;color:#858980;font-size:11px}
+@media(max-width:900px){.agrya-product-layout{gap:30px;grid-template-columns:minmax(0,.95fr) minmax(0,1fr)}.agrya-product-visual{height:clamp(390px,56vw,560px)}.agrya-section-number{width:48px;height:48px;flex-basis:48px;font-size:19px}.agrya-section-label{margin-bottom:21px}.agrya-featured-details{flex-direction:column}.agrya-product-slider{width:135px;flex-basis:135px;align-self:flex-end}}
+@media(max-width:650px){.agrya-product-section{padding:30px 18px 45px}.agrya-product-layout{grid-template-columns:1fr;gap:28px}.agrya-product-visual{height:auto;aspect-ratio:4/4.2;border-radius:21px}.agrya-product-content{padding:0 2px}.agrya-section-label{gap:9px;margin-bottom:19px;font-size:13px}.agrya-section-number{width:43px;height:43px;flex-basis:43px;font-size:17px}.agrya-product-title{font-size:clamp(35px,9vw,48px);line-height:1.14}.agrya-product-marks{margin:14px 0 20px}.agrya-featured-details{flex-direction:row;align-items:flex-end;gap:18px;margin-top:20px}.agrya-product-summary h3{font-size:23px}.agrya-product-summary p{font-size:13px}.agrya-shop-button{min-height:45px;padding:12px 17px;font-size:12px}.agrya-product-slider{width:112px;flex-basis:112px;padding-bottom:28px}.agrya-slider-controls button{width:23px;height:23px}}
+@media(max-width:390px){.agrya-featured-details{align-items:flex-start;flex-direction:column}.agrya-product-slider{align-self:flex-end;width:105px;flex-basis:105px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<section class="agrya-product-section" aria-label="Featured Agrya Ayurveda product">
+<div class="agrya-product-layout">
+  <div class="agrya-product-visual">
+    <img id="agrya-main-image" src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85" alt="Ayurvedic herbal oil and botanical ingredients">
+  </div>
+  <div class="agrya-product-content">
+    <div class="agrya-section-label"><span>Our reowned products</span></div>
+    <h1 class="agrya-product-title" id="agrya-product-title">Traditional care for everyday comfort</h1>
+    <div class="agrya-product-marks"><span><span class="mark">✦</span> Ayurveda-inspired</span><span><span class="mark">⌁</span> External use</span><span><span class="mark">♧</span> Herbal care</span></div>
+    <div class="agrya-featured-details">
+      <div class="agrya-product-summary">
+        <h3 id="agrya-product-name">Ayurvedic Back Care Thailam</h3>
+        <p id="agrya-product-description">A traditional massage oil for external use as part of your personal care routine. Review the product label and consult a qualified practitioner to confirm whether it is suitable for you.</p>
+        <a class="agrya-shop-button" id="agrya-shop-button" href="/shop/">Shop now <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="agrya-product-slider" aria-label="Explore more Agrya products">
+        <div class="agrya-slider-viewport"><div class="agrya-slider-track" id="agrya-slider-track">
+          <button class="agrya-mini-product" type="button" data-index="0" aria-label="View Ayurvedic Back Care Thailam"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=500&q=80" alt="Ayurvedic oil and herbs" loading="lazy"></button>
+          <button class="agrya-mini-product" type="button" data-index="1" aria-label="View Joint Comfort Thailam"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=500&q=80" alt="Natural care product bottles" loading="lazy"></button>
+          <button class="agrya-mini-product" type="button" data-index="2" aria-label="View Herbal Body Massage Oil"><img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=500&q=80" alt="Herbal personal care product" loading="lazy"></button>
+          <button class="agrya-mini-product" type="button" data-index="3" aria-label="View Ayurvedic Herbal Oil"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=500&q=80" alt="Botanical oil and ingredients" loading="lazy"></button>
+        </div></div>
+        <div class="agrya-slider-controls"><span class="agrya-slider-count" id="agrya-slider-count">01 / 04</span><button type="button" id="agrya-prev" aria-label="Previous product">‹</button><button type="button" id="agrya-next" aria-label="Next product">›</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<script>
+(() => {
+  // Replace these sample products and /shop/ URLs with the actual Agrya WooCommerce products.
+  const products = [
+    {title:"Traditional care for everyday comfort",name:"Ayurvedic Back Care Thailam",description:"A traditional massage oil for external use as part of your personal care routine. Review the product label and consult a qualified practitioner to confirm whether it is suitable for you.",image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85",url:"/shop/"},
+    {title:"Thoughtful care for joints and movement",name:"Joint Comfort Thailam",description:"A traditional external-use massage oil option. Check the ingredients and product directions, and ask your practitioner whether it is appropriate for your needs.",image:"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",url:"/shop/"},
+    {title:"Make time for a restorative ritual",name:"Herbal Body Massage Oil",description:"An oil for a considered massage routine. Follow the product label and check for sensitivities before use.",image:"https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1200&q=85",url:"/shop/"},
+    {title:"Bring botanical care into your routine",name:"Ayurvedic Herbal Oil",description:"Explore a traditional herbal oil for external care. Confirm ingredients, directions and suitability with the product information or your practitioner.",image:"https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=1200&q=85",url:"/shop/"}
+  ];
+  const mainImage=document.getElementById("agrya-main-image"), title=document.getElementById("agrya-product-title"), name=document.getElementById("agrya-product-name"), desc=document.getElementById("agrya-product-description"), shop=document.getElementById("agrya-shop-button"), track=document.getElementById("agrya-slider-track"), count=document.getElementById("agrya-slider-count"), buttons=[...document.querySelectorAll(".agrya-mini-product")];
+  let active=0;
+  function showProduct(index){
+    active=(index+products.length)%products.length; const p=products[active];
+    title.textContent=p.title; name.textContent=p.name; desc.textContent=p.description; shop.href=p.url; shop.setAttribute("aria-label","Shop "+p.name);
+    mainImage.style.display=""; mainImage.src=p.image; mainImage.alt=p.name; mainImage.onerror=()=>{mainImage.style.display="none";};
+    track.style.transform=`translateX(-${active*100}%)`; count.textContent=`${String(active+1).padStart(2,"0")} / ${String(products.length).padStart(2,"0")}`;
+    buttons.forEach((b,i)=>{b.setAttribute("aria-current",String(i===active));});
+  }
+  buttons.forEach(b=>b.addEventListener("click",()=>showProduct(Number(b.dataset.index))));
+  document.getElementById("agrya-prev").addEventListener("click",()=>showProduct(active-1));
+  document.getElementById("agrya-next").addEventListener("click",()=>showProduct(active+1));
+  showProduct(0);
+})();
+</script>
+</body>
+</html>
